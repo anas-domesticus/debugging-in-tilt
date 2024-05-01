@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+        - name: example
+          image: example
+#          securityContext:
+#            capabilities:
+#              add: ["SYS_PTRACE"]
+          command: ["/go/bin/dlv"]
+          args: ["--listen=:40000", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "/example.debug"]
+          ports:
+            - containerPort: 40000
+          imagePullPolicy: IfNotPresent
