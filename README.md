@@ -10,7 +10,7 @@ This project provides an example setup where you can debug your Go applications 
 
 Before you begin, ensure you have the following installed:
 - Docker
-- Kubernetes cluster (Minikube, kind, etc.)
+- kind
 - kubectl
 - ctlptl
 - Tilt
