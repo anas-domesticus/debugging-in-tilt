@@ -6,6 +6,8 @@ This repository demonstrates how to set up and use the Delve debugger inside a D
 
 This project provides an example setup where you can debug your Go applications using Delve inside a Kubernetes cluster. The use of Tilt streamlines the process of updating and redeploying containers as you develop, allowing for real-time debugging and development.
 
+Feel free to take a look at the blog post explaining this -> https://anasdomesticus.hashnode.dev/debugging-go-applications-inside-a-local-kubernetes-cluster
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
